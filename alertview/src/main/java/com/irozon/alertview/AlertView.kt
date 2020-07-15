@@ -47,7 +47,7 @@ class AlertView(private var title: String, private var message: String, private 
 
     /**
      * Set theme for the AlertView
-     * @param theme: AlertTheme
+     * @param theme:  AlertTheme
      */
     fun setTheme(theme: AlertTheme) {
         this.theme = theme
