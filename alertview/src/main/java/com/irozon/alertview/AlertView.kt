@@ -30,14 +30,17 @@ class AlertView(private var title: String, private var message: String, private 
             AlertStyle.BOTTOM_SHEET -> {
                 val bottomSheet = BottomSheetFragment(title, message, actions, style, theme)
                 bottomSheet.show(activity.supportFragmentManager, bottomSheet.tag)
+                bottomSheet.isCancelable=cancelable
             }
             AlertStyle.IOS -> {
                 val bottomSheet = BottomSheetFragment(title, message, actions, style, theme)
                 bottomSheet.show(activity.supportFragmentManager, bottomSheet.tag)
+                bottomSheet.isCancelable=cancelable
             }
             AlertStyle.DIALOG -> {
                 val bottomSheet = DialogFragment(title, message, actions, theme)
                 bottomSheet.show(activity.supportFragmentManager, bottomSheet.tag)
+                bottomSheet.isCancelable=cancelable
             }
         }
     }
